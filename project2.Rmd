@@ -1,0 +1,67 @@
+---
+title: "Project 2 - DS8002"
+author: "Rafik Matta"
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+---
+
+#Exploratory Data Analysis
+
+```{r}
+library(readr)
+links <- read_csv("C:/Users/rafik/Google Drive/Education/ds8002/ml-latest-small/links.csv")
+movies <- read_csv("C:/Users/rafik/Google Drive/Education/ds8002/ml-latest-small/movies.csv")
+ratings <- read_csv("C:/Users/rafik/Google Drive/Education/ds8002/ml-latest-small/ratings.csv")
+tags <- read_csv("C:/Users/rafik/Google Drive/Education/ds8002/ml-latest-small/tags.csv")
+```
+
+```{r}
+node_entropy<- function(output,x)
+{
+   classes = unique(output)
+   result = 0
+   N = length(x$class)
+   for(i in 1:length(classes))
+   {
+     Nm = length(subset(x, x$class == classes[i])$class)  
+     pm = Nm/N
+     result = result + (-(pm*log2(pm)))
+   }
+   return(result)
+}
+
+split_entropy<- function(x)
+{
+  
+}
+
+split_attribute <- function(x)
+{
+  min_ent = max()
+  for(i in 1:length())
+}
+
+generateTree <- function(output,x,theta)
+{
+  if(node_entropy(output,x) < theta)
+  {
+    return("leaf in class")
+  }
+  
+  
+}
+
+``` 
+
+\newpage
+
+
+
+
+
+
+
+
+
